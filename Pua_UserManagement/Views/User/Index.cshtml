@@ -43,7 +43,7 @@
 </div>
 
 <!-- Update Modal -->
-<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -79,3 +79,13 @@
         </div>
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        $('.edt').click(function(){
+            let id = $(this).data("id");
+            #('#editModal').load('/User/UpdatePartial/${id}')
+        });
+    </script>
+}

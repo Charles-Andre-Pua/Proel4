@@ -9,7 +9,10 @@
     <div class="row g-5">
         <div class="offset-2 col-md-8 col-lg-8">
             <h4 class="mb-3">User Registration</h4>
-            <form method="post" asp-controller="User" asp-action="CreateProcess" class="needs-validation">
+            <form method="post" asp-controller="User" asp-action="UpdateProcess" class="needs-validation">
+                <input asp-for="Id" hidden />
+                <input asp-for="DateCreated" hidden />
+                <input asp-for="User.Id" hidden />
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <label asp-for="Firstname" class="form-label">First Name</label>
@@ -41,5 +44,4 @@
             </form>
         </div>
     </div>
-
 </div>
