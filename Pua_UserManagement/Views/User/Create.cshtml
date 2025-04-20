@@ -27,13 +27,13 @@
                         <label asp-for="User.Username" class="form-label">Username</label>
                         <div class="input-group">
                             <span class="input-group-text">@@</span>
-                            <input class="form-control" asp-for="User.Username" type="text" required />
+                            <input class="form-control" asp-for="User.Username" placeholder="Username" type="text" required />
                         </div>
                     </div>
                     <div class="col-6">
                         <label asp-for="User.Password" class="form-label">Password</label>
-                        <div class="input-group-text has-validation">
-                            <input type="passwordS" class="form-control" asp-for="User.Password" placeholder="Password" required />
+                        <div class="input-group has-validation">
+                            <input class="form-control" asp-for="User.Password" placeholder="Password" type="password" required />
                         </div>
                     </div>
                     <button class="btn btn-success col-12 my-5" type="submit">Create</button>
@@ -41,5 +41,4 @@
             </form>
         </div>
     </div>
-
 </div>

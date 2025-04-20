@@ -43,15 +43,14 @@
 </div>
 
 <!-- Update Modal -->
-<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                ...
+            <div class="modal-body" id="editModal">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -83,9 +82,11 @@
 
 @section Scripts {
     <script>
-        $('.edt').click(function(){
+        $('.editPerson').click(function(){
             let id = $(this).data("id");
-            #('#editModal').load('/User/UpdatePartial/${id}')
+            $('#editModal').load('/User/UpdatePartial/${id}')
         });
+
+    
     </script>
 }

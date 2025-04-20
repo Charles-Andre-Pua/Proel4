@@ -34,7 +34,7 @@ namespace Pua_UserManagement.Controllers
         public IActionResult UpdatePartial(int id)
         {
             Person? person = _dBContext.People.Include(a=>a.User).FirstOrDefault(p => p.Id == id);
-            return PartialView();
+            return PartialView(person);
         }
     }
 }
